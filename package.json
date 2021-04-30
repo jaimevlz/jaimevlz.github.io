@@ -1,34 +1,53 @@
 {
-  "name": "spacex-platzi",
-  "version": "1.0.0",
-  "description": "A web application that shows info of SpaceX, using spaceX rest API",
-  "main": "index.html",
+  "name": "developers-portfolio",
+  "description": "A personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.",
+  "homepage": "http://hashirshoaeb.com",
+  "version": "2.0.0",
+  "private": true,
+  "author": {
+    "name": "Hashir Shoaib",
+    "email": "hashirshoaeb@gmail.com",
+    "url": "https://github.com/hashirshoaeb"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.2",
+    "gh-pages": "^2.2.0",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.14.0",
+    "react-loading-skeleton": "^2.1.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.4",
+    "react-typist": "^2.0.5",
+    "typescript": "^3.9.7"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "custom-deploy": "node pages.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/santiaguf/spacex-platzi.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [
-    "platzi",
-    "spacex",
-    "API"
-  ],
-  "author": "Santiago Bernal @santiaguf",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/santiaguf/spacex-platzi/issues"
-  },
-  "homepage": "https://github.com/santiaguf/spacex-platzi#readme",
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.23.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.23.1"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
